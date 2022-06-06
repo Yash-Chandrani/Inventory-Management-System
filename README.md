@@ -1,24 +1,9 @@
 # README
+This is shot at Ruby and Rails.
+It is a CRUD app which maintains records of stocks.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Project details:
 
-Things you may want to cover:
+* Ruby version: 3.1.2
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* Rails version: 7.0.3
