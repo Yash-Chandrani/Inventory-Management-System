@@ -1,0 +1,43 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark d-flex p-2 ps-4 pe-4">
+  <%= link_to 'Inventory Management App', root_path, class:"navbar-brand" %>
+  
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <ul class="navbar-nav mr-auto justify-content-start">
+        <li class="nav-item">
+            <%= link_to "About Us", home_about_path, class:"nav-link" %>
+        </li>
+
+        <% if user_signed_in?%>
+            <li class="nav-item">
+                <%= link_to "Sign out", destroy_user_session_path,class:"nav-link" %>
+            </li>
+            <li class="nav-item">
+                <%= link_to "Edit profile", edit_user_registration_path, class:"nav-link" %>
+            </li>
+
+            <li class="nav-item">
+                <%= link_to "Stocks", stocks_path, class:"nav-link" %>
+            </li>                        
+        <%else%>
+            <li class="nav-item">
+                <%= link_to "Sign up", new_user_registration_path, class:"nav-link" %>
+            </li>
+
+            <li class="nav-item">
+                <%= link_to "Sign in", new_user_session_path, class:"nav-link" %>
+            </li>
+        <% end %>
+
+    </ul>
+  <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+    <div>
+    
+        <form class="d-flex" role="search">
+            <input class="form-control me-2 inline-block" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success inline-block" type="submit">Search</button>
+        </form>
+    </div>
+  </div>
+</nav>

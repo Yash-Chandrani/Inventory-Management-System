@@ -1,0 +1,20 @@
+<p style="color: green"><%= notice %></p>
+<%if user_signed_in?%>
+<h1>Stocks</h1>
+
+<div id="stocks">
+  <% @stocks.each do |stock| %>
+      <%= render stock %>
+      <%# <%=stock.user_id%>
+      <%# <%if stock.user==current_user%>  
+      <p>
+        <%= link_to "Show this stock", stock %>
+      </p>
+      <%# <%end%>
+  <% end %>
+</div>
+
+<%= link_to "New stock", new_stock_path %>
+<%else%>
+<h1>Welcome to Deals 91</h1>
+<%end%>
